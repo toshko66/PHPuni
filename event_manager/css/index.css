@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(115deg, #d1f4ff 10%, #e1aef8 90%);
+}
+
+/* NAVBAR */
+.navbar {
+    
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 10px 20px;
+    max-width: 1440px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 100px;
+    /* Adjust the size of your logo */
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    padding: 0 15px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-menu .cta {
+    background-color: #56c0e4;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.nav-p {
+    font-family: "Inconsolata", monospace;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+/* HEADER */
+
+.header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header-wrapper {
+    display: flex;
+    background: linear-gradient(115deg, #d1f4ff 10%, #a54bcf 90%);
+    padding: 75px;
+    text-align: center;
+    color: white;
+    border-radius: 33px;
+}
+
+.text-wrapper {
+    flex: 2;
+    text-align: left;
+}
+
+.header-title {
+    font-size: 90px;
+    font-family: "Inconsolata", monospace;
+    margin-bottom: 30px;
+    /* Spacing after the title */
+}
+
+.header-subtitle {
+    font-size: 26px;
+    margin-bottom: 40px;
+    /* Spacing after the subtitle */
+}
+
+.header-button {
+    background-color: #FFEB3B;
+    /* Yellow button */
+    color: black;
+    /* Black text on button */
+    padding: 10px 20px;
+    /* Spacing inside button */
+    border: none;
+    /* No border */
+    border-radius: 30px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 26px;
+    /* Font size of button text */
+    text-transform: uppercase;
+    /* Uppercase button text */
+}
+
+.image-wrapper {
+    flex: 1;
+    height: 600px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 8%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 100px;
+}
+
+/* FORM */
+
+.container {
+    max-width: 1440px;
+    padding: 0 10px;
+    margin: 10px auto;
+    background: #fff;
+    padding: 25px 40px 10px 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .text {
+    text-align: center;
+    font-size: 41px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container form {
+    padding: 30px 0 0 0;
+}
+
+.container form .form-row {
+    display: flex;
+    margin: 32px 0;
+}
+
+form .form-row .input-data {
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.input-data input,
+.textarea textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+.input-data input[type="date"]~label {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #3498db;
+}
+
+.input-data input:focus~label,
+.textarea textarea:focus~label,
+.input-data input:valid~label,
+.textarea textarea:valid~label {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #3498db;
+}
+
+
+.textarea textarea {
+    resize: none;
+    padding-top: 10px;
+}
+
+.input-data label {
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.textarea label {
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-data .underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+
+.input-data .underline:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #3498db;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus~.underline:before,
+.input-data input:valid~.underline:before,
+.textarea textarea:focus~.underline:before,
+.textarea textarea:valid~.underline:before {
+    transform: scale(1);
+}
+
+.submit-btn .input-data {
+    overflow: hidden;
+    height: 45px !important;
+    width: 25% !important;
+}
+
+.submit-btn .input-data .inner {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    transition: all 0.4s;
+}
+
+.submit-btn .input-data:hover .inner {
+    left: 0;
+}
+
+.submit-btn .input-data input {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.success-message {
+    color: #28a745;
+    /* Green */
+    background-color: #dff0d8;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: #dc3545;
+    /* Red */
+    background-color: #f8d7da;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.text
+/* TABLE STYLES */
+
+.event-image {
+    width: 100%;
+    /* Ensure the image container spans the width of the card */
+    overflow: hidden;
+    /* Keep the image within the bounds of the container */
+}
+
+.event-image img {
+    width: 100%;
+    /* Make the image fill the container */
+    height: auto;
+    /* Keep the image's aspect ratio */
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    /* Stack the details vertically */
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    gap: 20px;
+    justify-content: center;
+   margin: 20px auto;
+    /* Adjust the spacing as needed */
+}
+
+.event-card {
+    background-color: #ffffff;
+    /* White background for the card */
+    border-radius: 15px;
+    /* Rounded corners for the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    width: 250px;
+    /* Fixed width, you can use percentages or make it responsive */
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    /* Smooth transition for hover effect */
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    /* Slight raise effect on hover */
+}
+
+.event-header {
+    background-color: #9f01ea;
+    /* Purple header background to match the vibe */
+    color: #ffffff;
+    /* White text for contrast */
+    padding: 15px;
+    font-size: 1.2rem;
+    /* Larger text for the header */
+}
+
+.event-body {
+    padding: 15px;
+    color: #444;
+    /* Dark text color for readability */
+    font-size: 0.95rem;
+    /* Slightly smaller font size for the body */
+}
+
+.event-body p {
+    margin-bottom: 1rem;
+}
+
+.event-date {
+    font-weight: bold;
+    /* Make the date stand out */
+}
+
+.event-footer {
+    background-color: #f8f9fa;
+    /* Light footer background for contrast */
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    /* Space out the action buttons */
+}
+
+.btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.2s;
+    /* Smooth background transition */
+}
+
+.delete-btn {
+    background-color: #d63031;
+    /* Red button for delete action */
+}
+
+.delete-btn:hover {
+    background-color: #e17055;
+    /* Lighter red on hover */
+}
+
+.update-btn {
+    background-color: #00b894;
+    /* Green button for update action */
+}
+
+.update-btn:hover {
+    background-color: #55efc4;
+    /* Lighter green on hover */
+}
+
+/* FOOTER */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    margin: 0 auto;
+    background-color: #2C0735;
+    color: white;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 16px;
+}
+
+.footer-content form {
+    margin: 20px 0;
+}
+
+.footer-content input[type="email"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-content button {
+    background-color: #E84A5F;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
+
+.footer-icons {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+}
+
+.top-link {
+    display: inline-block;
+    background-color: #E84A5F;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.chat-button {
+    background-color: #E84A5F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 700px) {
+    .container .text {
+        font-size: 30px;
+    }
+
+    .container form {
+        padding: 10px 0 0 0;
+    }
+
+    .container form .form-row {
+        display: block;
+    }
+
+    form .form-row .input-data {
+        margin: 35px 0 !important;
+    }
+
+    .submit-btn .input-data {
+        width: 40% !important;
+    }
+}
